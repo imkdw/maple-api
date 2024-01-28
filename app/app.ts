@@ -1,11 +1,12 @@
 import { get } from "./api/api.service";
+import myConfig from "./config/myConfig";
 import { MapleOpenApi } from "./types/maple.interface";
 import { formatDate } from "./utils/date";
 
 /**
  * 캐릭터의 이름
  */
-const CHARACTER_NAME = "통신반";
+const CHARACTER_NAME = myConfig.nexonOpenApi.characterName;
 
 /**
  * API 호출 기준 날짜
