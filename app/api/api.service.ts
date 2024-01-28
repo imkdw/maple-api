@@ -11,8 +11,6 @@ export const get = async <T>(params: GetParams): Promise<T> => {
   const queries = queryArrayToString(params.queries);
   const url = `${params.url}?${queries}`;
 
-  console.log(url);
-
   try {
     const res = await api.get(url);
     return res.data;

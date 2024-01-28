@@ -2,6 +2,7 @@ import { get } from "./api/api.service";
 import myConfig from "./config/myConfig";
 import { MapleOpenApi } from "./types/maple.interface";
 import { formatDate } from "./utils/date";
+import util from "util";
 
 /**
  * 캐릭터의 이름
@@ -42,6 +43,12 @@ const getItemEquipment = async (ocid: string) => {
 const init = async () => {
   const ocid = await getOcid(CHARACTER_NAME);
   const itemEquipment = await getItemEquipment(ocid);
+  console.log(`
+    캐릭터명 : ${CHARACTER_NAME}
+    직업 : ${itemEquipment.character_class}
+    성별 : ${itemEquipment.character_gender}
+    아이템 1개 옵션 : ${util.inspect(itemEquipment.item_equipment[0].item_total_option, { depth: 10, colors: true })}
+  `);
 };
 
 init();

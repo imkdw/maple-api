@@ -7,5 +7,5 @@
 X_NXOPEN_API_KEY=
 
 # 조회할 캐릭터의 이름
-CHARACTER_NAME=
+CHARACTER_NAME=마갑례
 ```
