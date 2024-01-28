@@ -1,0 +1,20 @@
+{
+  "name": "maple-api",
+  "version": "1.0.0",
+  "description": "maple-api",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node dist/app.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.8",
+    "tsc-watch": "^6.0.4"
+  }
+}
